@@ -1,0 +1,28 @@
+<div class="container">
+  <h1> Details Form </h1>
+
+
+
+<table class="table">
+
+  <form #f= 'ngForm' (ngSubmit) = 'onSubmit(f.value)'>
+
+
+
+
+      <td><input ngModel name="firstName"> </td>
+    <td><input ngModel name="lastName"></td>
+    <td><button type="submit" class="btn btn-success" name="button">ADD USER</button></td>
+
+</form>
+<tr>
+  <td>First Name</td>
+  <td>Last Name</td>
+</tr>
+  <tr *ngFor = 'let user of users'>
+    <td >{{user.firstName}}</td>
+    <td >{{user.lastName}}</td>
+    <td> <button type="button"  class="btn btn-warning"(click) = "selectedUser(user)" name="button">Delete</button>
+  </tr>
+</table>
+</div>
